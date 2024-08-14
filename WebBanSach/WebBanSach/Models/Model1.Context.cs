@@ -13,10 +13,10 @@ namespace WebBanSach.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BookStoreEntities1 : DbContext
+    public partial class BookstoreEntities : DbContext
     {
-        public BookStoreEntities1()
-            : base("name=BookStoreEntities1")
+        public BookstoreEntities()
+            : base("name=BookstoreEntities")
         {
         }
     
@@ -25,12 +25,11 @@ namespace WebBanSach.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Comment> Comments { get; set; }
-        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Comments> Comments { get; set; }
+        public virtual DbSet<OrderDetails> OrderDetails { get; set; }
+        public virtual DbSet<Orders> Orders { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<User> User { get; set; }
     }
 }
