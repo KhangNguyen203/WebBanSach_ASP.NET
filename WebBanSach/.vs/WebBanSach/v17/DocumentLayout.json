@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Users\\Login.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Views\\Users\\Login.cshtml",
+              "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Users\\Login.cshtml",
+              "RelativeToolTip": "WebBanSach\\Views\\Users\\Login.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T13:14:03.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "WebBanSach\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "WebBanSach\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAADYAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-12T13:39:48.073Z",
               "EditorCaption": ""
