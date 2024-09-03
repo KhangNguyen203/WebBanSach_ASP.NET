@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace QuanLiBanSach02.Controllers
-{
+{ 
     public class BookController : Controller
     {
         private BookStoreEntities da = new BookStoreEntities();
