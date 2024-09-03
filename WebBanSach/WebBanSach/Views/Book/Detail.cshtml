@@ -1,17 +1,84 @@
-﻿@{
-    Layout = null;
+﻿@model WebBanSach.Models.Product
+@using System.Globalization
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    
+    <hr />
+    <div style="margin: 0 13rem;">
+        <div style="background-color:white">
+            <div class="grid__auto">
+                <div style="display:flex;">
+                    <div>
+                        <div style="margin: 15px 50px 15px 15px;">
+                            <img style="width:18rem; height:26rem" src="@Url.Content($"~/Content/Images/{Model.Image}")" alt="Product Image" />
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-top:5px">@Html.DisplayFor(model => model.ProductName)</h3>
+
+                        <p><span style="color:red;">@Html.DisplayFor(model => model.Author)</span> (tác giả)</p>
+
+                        <h3 style="color:red;">@Html.DisplayFor(model => model.Price) VND</h3>
+
+                        <p>Tình trạng: <span style="color:red;">Còn hàng</span></p>
+
+                        <p> tags: @Html.DisplayFor(model => model.Category.CategoryName)</p>
+
+                        <p>@Html.DisplayFor(model => model.Description)</p>
+
+                        <div class="border-cus-2">
+                            <a class="a-cus-2" href="@Url.Action("AddToCart", "Cart", new { id = Model.ProductID })">Thêm vào giỏ</a>
+                        </div>
+
+                        <div>
+                            <p>Gọi đặt hàng: <span style="color:red; font-weight: bold;">(028) 6666 9999</span> hoặc <span style="color:red; font-weight: bold;"> 0933 109 009</span></p>
+                            <h6>Thông tin & Khuyến mãi</h6>
+                            <p>Đổi trả hàng trong vòng 7 ngày <br />Sử dụng mỗi <span style="color:red; font-weight: bold;">3.000 BBxu</span> để được giảm 10.000đ.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*<div class="bg-white border border-dark mt-4">
+            <div>
+                @Html.Action("ViewComments", "Book", new { id = Model.ProductID })
+            </div>
+            <div>
+                @Html.Action("AddComment", "Book")
+            </div>
+        </di*@
+
+        <div class="container" style="background-color:white; margin-top:20px; padding-bottom:5px">
+            <h5 style="color:orange">Sản phẩm cùng loại</h5>
+            <hr />
+            <ul class="row g-3" style="list-style-type:none; margin-left:-35px">
+                @foreach (var item in ViewBag.Products)
+                {
+                    <li class="col-3" style="min-height: 390px;">
+                        <a class="text-decoration-none" href="@Url.Action("Detail", "Book", new { id = item.ProductID })">
+                            <div class="d-flex justify-content-around flex-wrap h-100" style="background-color:gainsboro">
+                                <div style="margin:10px">
+                                    <img src="~/Content/Images/@item.Image" alt="@item.Image" style="width:200px; height:180px" />
+                                </div>
+                                <div class="text-center">
+                                    <h5>@item.ProductName</h5>
+                                    <p>@item.Author</p>
+                                    <h5 style="color:red">@item.Price</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
-</body>
-</html>
+}
