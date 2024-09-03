@@ -12,15 +12,15 @@ namespace WebBanSach.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Comments
+    public partial class OrderDetail
     {
-        public int id { get; set; }
-        public string Content { get; set; }
-        public Nullable<System.DateTime> CreatedAt { get; set; }
-        public Nullable<int> UserId { get; set; }
-        public Nullable<int> ProductId { get; set; }
+        public int ID { get; set; }
+        public Nullable<int> OrderID { get; set; }
+        public Nullable<int> ProductID { get; set; }
+        public Nullable<double> UnitPrice { get; set; }
+        public Nullable<int> Quantity { get; set; }
     
+        public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
-        public virtual User User { get; set; }
     }
 }
