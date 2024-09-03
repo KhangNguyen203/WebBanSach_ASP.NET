@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BookStoreModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="BookstoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Category">
     <Key>
       <PropertyRef Name="CategoryID" />
     </Key>
     <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Products" Relationship="Self.FK__Product__Categor__68487DD7" FromRole="Category" ToRole="Product" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__Product__Categor__440B1D61" FromRole="Category" ToRole="Product" />
   </EntityType>
-  <EntityType Name="Comment">
+  <EntityType Name="Comments">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -17,10 +17,10 @@
     <Property Name="CreatedAt" Type="DateTime" Precision="3" />
     <Property Name="UserId" Type="Int32" />
     <Property Name="ProductId" Type="Int32" />
-    <NavigationProperty Name="Product" Relationship="Self.FK__Comments__Produc__6E01572D" FromRole="Comments" ToRole="Product" />
-    <NavigationProperty Name="User" Relationship="Self.FK__Comments__UserId__6D0D32F4" FromRole="Comments" ToRole="User" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__Comments__Produc__4222D4EF" FromRole="Comments" ToRole="Product" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Comments__UserId__412EB0B6" FromRole="Comments" ToRole="User" />
   </EntityType>
-  <EntityType Name="OrderDetail">
+  <EntityType Name="OrderDetails">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
@@ -29,19 +29,18 @@
     <Property Name="ProductID" Type="Int32" />
     <Property Name="UnitPrice" Type="Double" />
     <Property Name="Quantity" Type="Int32" />
-    <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__Order__693CA210" FromRole="OrderDetails" ToRole="Orders" />
-    <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__6A30C649" FromRole="OrderDetails" ToRole="Product" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="OrderDetails" ToRole="Orders" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__45F365D3" FromRole="OrderDetails" ToRole="Product" />
   </EntityType>
-  <EntityType Name="Order">
+  <EntityType Name="Orders">
     <Key>
       <PropertyRef Name="OrderID" />
     </Key>
     <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="OrderDate" Type="DateTime" Precision="0" />
     <Property Name="UserID" Type="Int32" />
-    <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__693CA210" FromRole="Orders" ToRole="OrderDetails" />
-    <NavigationProperty Name="User" Relationship="Self.FK__Orders__UserID__6754599E" FromRole="Orders" ToRole="User" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="Orders" ToRole="OrderDetails" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Orders__UserID__4316F928" FromRole="Orders" ToRole="User" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -54,19 +53,9 @@
     <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="CategoryID" Type="Int32" />
     <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Category" Relationship="Self.FK__Product__Categor__68487DD7" FromRole="Product" ToRole="Category" />
-    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__Produc__6E01572D" FromRole="Product" ToRole="Comments" />
-    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__6A30C649" FromRole="Product" ToRole="OrderDetails" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK__Product__Categor__440B1D61" FromRole="Product" ToRole="Category" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__Produc__4222D4EF" FromRole="Product" ToRole="Comments" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__45F365D3" FromRole="Product" ToRole="OrderDetails" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -79,10 +68,10 @@
     <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__UserId__6D0D32F4" FromRole="User" ToRole="Comments" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__UserID__6754599E" FromRole="User" ToRole="Orders" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__UserId__412EB0B6" FromRole="User" ToRole="Comments" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__UserID__4316F928" FromRole="User" ToRole="Orders" />
   </EntityType>
-  <Association Name="FK__Product__Categor__68487DD7">
+  <Association Name="FK__Product__Categor__440B1D61">
     <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
     <End Role="Product" Type="Self.Product" Multiplicity="*" />
     <ReferentialConstraint>
@@ -94,9 +83,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Comments__Produc__6E01572D">
+  <Association Name="FK__Comments__Produc__4222D4EF">
     <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
-    <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
         <PropertyRef Name="ProductID" />
@@ -106,9 +95,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Comments__UserId__6D0D32F4">
+  <Association Name="FK__Comments__UserId__412EB0B6">
     <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
+    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="UserID" />
@@ -118,9 +107,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrderDeta__Order__693CA210">
-    <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
-    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+  <Association Name="FK__OrderDeta__Order__44FF419A">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Orders">
         <PropertyRef Name="OrderID" />
@@ -130,9 +119,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrderDeta__Produ__6A30C649">
+  <Association Name="FK__OrderDeta__Produ__45F365D3">
     <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
-    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
+    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
         <PropertyRef Name="ProductID" />
@@ -142,9 +131,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Orders__UserID__6754599E">
+  <Association Name="FK__Orders__UserID__4316F928">
     <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="UserID" />
@@ -154,36 +143,35 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BookStoreEntities1" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Categories" EntityType="Self.Category" />
-    <EntitySet Name="Comments" EntityType="Self.Comment" />
-    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
-    <EntitySet Name="Orders" EntityType="Self.Order" />
-    <EntitySet Name="Products" EntityType="Self.Product" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="Users" EntityType="Self.User" />
-    <AssociationSet Name="FK__Product__Categor__68487DD7" Association="Self.FK__Product__Categor__68487DD7">
-      <End Role="Category" EntitySet="Categories" />
-      <End Role="Product" EntitySet="Products" />
+  <EntityContainer Name="BookstoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Comments" EntityType="Self.Comments" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK__Product__Categor__440B1D61" Association="Self.FK__Product__Categor__440B1D61">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product" EntitySet="Product" />
     </AssociationSet>
-    <AssociationSet Name="FK__Comments__Produc__6E01572D" Association="Self.FK__Comments__Produc__6E01572D">
-      <End Role="Product" EntitySet="Products" />
+    <AssociationSet Name="FK__Comments__Produc__4222D4EF" Association="Self.FK__Comments__Produc__4222D4EF">
+      <End Role="Product" EntitySet="Product" />
       <End Role="Comments" EntitySet="Comments" />
     </AssociationSet>
-    <AssociationSet Name="FK__Comments__UserId__6D0D32F4" Association="Self.FK__Comments__UserId__6D0D32F4">
-      <End Role="User" EntitySet="Users" />
+    <AssociationSet Name="FK__Comments__UserId__412EB0B6" Association="Self.FK__Comments__UserId__412EB0B6">
+      <End Role="User" EntitySet="User" />
       <End Role="Comments" EntitySet="Comments" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrderDeta__Order__693CA210" Association="Self.FK__OrderDeta__Order__693CA210">
+    <AssociationSet Name="FK__OrderDeta__Order__44FF419A" Association="Self.FK__OrderDeta__Order__44FF419A">
       <End Role="Orders" EntitySet="Orders" />
       <End Role="OrderDetails" EntitySet="OrderDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrderDeta__Produ__6A30C649" Association="Self.FK__OrderDeta__Produ__6A30C649">
-      <End Role="Product" EntitySet="Products" />
+    <AssociationSet Name="FK__OrderDeta__Produ__45F365D3" Association="Self.FK__OrderDeta__Produ__45F365D3">
+      <End Role="Product" EntitySet="Product" />
       <End Role="OrderDetails" EntitySet="OrderDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK__Orders__UserID__6754599E" Association="Self.FK__Orders__UserID__6754599E">
-      <End Role="User" EntitySet="Users" />
+    <AssociationSet Name="FK__Orders__UserID__4316F928" Association="Self.FK__Orders__UserID__4316F928">
+      <End Role="User" EntitySet="User" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
   </EntityContainer>
