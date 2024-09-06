@@ -18,6 +18,7 @@ namespace WebBanSach.Controllers
             return View(cart);
         }
 
+        // Add product to cart
         public RedirectToRouteResult AddToCart(int id)
         {
             if (Session["cart"] == null)
@@ -44,6 +45,32 @@ namespace WebBanSach.Controllers
             Session["cart"] = cart;
 
             return RedirectToAction("Detail", "Book", new { id = id });
+        }
+
+        // Update quantity product into cart
+        public RedirectToRouteResult UpdateCart(int id, int txtSoLuong)
+        {
+            List<CartModels> cart = Session["cart"] as List<CartModels>;
+            CartModels item = cart.FirstOrDefault(m => m.ProductID == id);
+            if (item != null)
+            {
+                item.Quantity = txtSoLuong;
+                Session["cart"] = cart;
+            }
+            return RedirectToAction("Cart");
+        }
+
+        // delete product into cart
+        public RedirectToRouteResult DeleteCartItem(int id)
+        {
+            List<CartModels> cart = Session["cart"] as List<CartModels>;
+            CartModels item = cart.FirstOrDefault(m => m.ProductID == id);
+            if (item != null)
+            {
+                cart.Remove(item);
+                Session["cart"] = cart;
+            }
+            return RedirectToAction("Cart");
         }
     }
 }
