@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BookstoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="BookStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Category">
     <Key>
       <PropertyRef Name="CategoryID" />
     </Key>
     <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Product" Relationship="Self.FK__Product__Categor__440B1D61" FromRole="Category" ToRole="Product" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Product__Categor__440B1D61" FromRole="Category" ToRole="Product" />
   </EntityType>
-  <EntityType Name="Comments">
+  <EntityType Name="Comment">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -20,7 +20,7 @@
     <NavigationProperty Name="Product" Relationship="Self.FK__Comments__Produc__4222D4EF" FromRole="Comments" ToRole="Product" />
     <NavigationProperty Name="User" Relationship="Self.FK__Comments__UserId__412EB0B6" FromRole="Comments" ToRole="User" />
   </EntityType>
-  <EntityType Name="OrderDetails">
+  <EntityType Name="OrderDetail">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
@@ -29,10 +29,10 @@
     <Property Name="ProductID" Type="Int32" />
     <Property Name="UnitPrice" Type="Double" />
     <Property Name="Quantity" Type="Int32" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="OrderDetails" ToRole="Orders" />
+    <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="OrderDetails" ToRole="Orders" />
     <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__45F365D3" FromRole="OrderDetails" ToRole="Product" />
   </EntityType>
-  <EntityType Name="Orders">
+  <EntityType Name="Order">
     <Key>
       <PropertyRef Name="OrderID" />
     </Key>
@@ -85,7 +85,7 @@
   </Association>
   <Association Name="FK__Comments__Produc__4222D4EF">
     <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
-    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
         <PropertyRef Name="ProductID" />
@@ -97,7 +97,7 @@
   </Association>
   <Association Name="FK__Comments__UserId__412EB0B6">
     <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Comments" Type="Self.Comments" Multiplicity="*" />
+    <End Role="Comments" Type="Self.Comment" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="UserID" />
@@ -108,8 +108,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__OrderDeta__Order__44FF419A">
-    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
-    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Orders">
         <PropertyRef Name="OrderID" />
@@ -121,7 +121,7 @@
   </Association>
   <Association Name="FK__OrderDeta__Produ__45F365D3">
     <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
-    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+    <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
         <PropertyRef Name="ProductID" />
@@ -133,7 +133,7 @@
   </Association>
   <Association Name="FK__Orders__UserID__4316F928">
     <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="UserID" />
@@ -143,23 +143,23 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BookstoreEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Category" EntityType="Self.Category" />
-    <EntitySet Name="Comments" EntityType="Self.Comments" />
-    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" />
-    <EntitySet Name="Orders" EntityType="Self.Orders" />
-    <EntitySet Name="Product" EntityType="Self.Product" />
-    <EntitySet Name="User" EntityType="Self.User" />
+  <EntityContainer Name="BookStoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Comments" EntityType="Self.Comment" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="Users" EntityType="Self.User" />
     <AssociationSet Name="FK__Product__Categor__440B1D61" Association="Self.FK__Product__Categor__440B1D61">
-      <End Role="Category" EntitySet="Category" />
-      <End Role="Product" EntitySet="Product" />
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
     </AssociationSet>
     <AssociationSet Name="FK__Comments__Produc__4222D4EF" Association="Self.FK__Comments__Produc__4222D4EF">
-      <End Role="Product" EntitySet="Product" />
+      <End Role="Product" EntitySet="Products" />
       <End Role="Comments" EntitySet="Comments" />
     </AssociationSet>
     <AssociationSet Name="FK__Comments__UserId__412EB0B6" Association="Self.FK__Comments__UserId__412EB0B6">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Comments" EntitySet="Comments" />
     </AssociationSet>
     <AssociationSet Name="FK__OrderDeta__Order__44FF419A" Association="Self.FK__OrderDeta__Order__44FF419A">
@@ -167,12 +167,31 @@
       <End Role="OrderDetails" EntitySet="OrderDetails" />
     </AssociationSet>
     <AssociationSet Name="FK__OrderDeta__Produ__45F365D3" Association="Self.FK__OrderDeta__Produ__45F365D3">
-      <End Role="Product" EntitySet="Product" />
+      <End Role="Product" EntitySet="Products" />
       <End Role="OrderDetails" EntitySet="OrderDetails" />
     </AssociationSet>
     <AssociationSet Name="FK__Orders__UserID__4316F928" Association="Self.FK__Orders__UserID__4316F928">
-      <End Role="User" EntitySet="User" />
+      <End Role="User" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
+    <FunctionImport Name="spThongKeDoanhThuTheoNam" ReturnType="Collection(BookStoreModel.spThongKeDoanhThuTheoNam_Result)">
+      <Parameter Name="year" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spThongKeSoLuongSanPhamTheoThang" ReturnType="Collection(BookStoreModel.spThongKeSoLuongSanPhamTheoThang_Result)">
+      <Parameter Name="thang" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ThongKeDoanhThuTheoThang" ReturnType="Collection(BookStoreModel.ThongKeDoanhThuTheoThang_Result)" />
   </EntityContainer>
+  <ComplexType Name="spThongKeDoanhThuTheoNam_Result">
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+    <Property Type="Double" Name="TongTien" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spThongKeSoLuongSanPhamTheoThang_Result">
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="soLuong" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ThongKeDoanhThuTheoThang_Result">
+    <Property Type="Int32" Name="thang" Nullable="true" />
+    <Property Type="Double" Name="TongTien" Nullable="true" />
+  </ComplexType>
 </Schema>
