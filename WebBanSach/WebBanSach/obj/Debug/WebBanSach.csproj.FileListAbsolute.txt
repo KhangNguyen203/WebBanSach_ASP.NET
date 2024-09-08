@@ -599,3 +599,7 @@ C:\Users\SETUP\Desktop\WebBanSach_ASP.NET\WebBanSach\WebBanSach\obj\Debug\WebBan
 C:\Users\SETUP\Desktop\WebBanSach_ASP.NET\WebBanSach\WebBanSach\obj\Debug\WebBanSach.csproj.Up2Date
 C:\Users\SETUP\Desktop\WebBanSach_ASP.NET\WebBanSach\WebBanSach\obj\Debug\WebBanSach.dll
 C:\Users\SETUP\Desktop\WebBanSach_ASP.NET\WebBanSach\WebBanSach\obj\Debug\WebBanSach.pdb
+D:\WebBanSach\WebBanSach_ASP.NET\WebBanSach\WebBanSach\bin\PagedList.dll
+D:\WebBanSach\WebBanSach_ASP.NET\WebBanSach\WebBanSach\bin\PagedList.Mvc.dll
+D:\WebBanSach\WebBanSach_ASP.NET\WebBanSach\WebBanSach\bin\PagedList.xml
+D:\WebBanSach\WebBanSach_ASP.NET\WebBanSach\WebBanSach\bin\PagedList.Mvc.xml
