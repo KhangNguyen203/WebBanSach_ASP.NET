@@ -34,6 +34,7 @@
     <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OrderDate" Type="date" />
     <Property Name="UserID" Type="int" />
+    <Property Name="Status" Type="nchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="Product">
     <Key>

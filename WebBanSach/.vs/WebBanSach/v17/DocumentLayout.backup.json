@@ -1,10 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\",
+  "WorkspaceRootPath": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\new folder\\webbansach_asp.net\\webbansach\\webbansach\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\new folder\\webbansach_asp.net\\webbansach\\webbansach\\views\\book\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\book\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\new folder\\webbansach_asp.net\\webbansach\\webbansach\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\new folder\\webbansach_asp.net\\webbansach\\webbansach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\new folder\\webbansach_asp.net\\webbansach\\webbansach\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\new folder\\webbansach_asp.net\\webbansach\\webbansach\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +42,80 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Book\\Detail.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Views\\Book\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Book\\Detail.cshtml",
+              "RelativeToolTip": "WebBanSach\\Views\\Book\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T17:44:42.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Cart\\Cart.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Views\\Cart\\Cart.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Cart\\Cart.cshtml",
+              "RelativeToolTip": "WebBanSach\\Views\\Cart\\Cart.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T17:43:59.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebBanSach\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T17:41:48.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "WebBanSach\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-09T17:41:43.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Web.config",
+              "RelativeDocumentMoniker": "WebBanSach\\Web.config",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Web.config",
+              "RelativeToolTip": "WebBanSach\\Web.config",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEMAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-09T16:39:30.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Controllers\\CartController.cs",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "WebBanSach\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\New folder\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Controllers\\CartController.cs",
               "RelativeToolTip": "WebBanSach\\Controllers\\CartController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAcwEcAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAuwFEAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-06T17:19:37.043Z",
+              "WhenOpened": "2024-09-09T16:26:44.197Z",
               "EditorCaption": ""
             }
           ]
