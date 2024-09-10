@@ -141,6 +141,7 @@
     <Compile Include="Areas\Admin\Controllers\DashBoardController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\StatsController.cs" />
+    <Compile Include="Controllers\ListOrderController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -274,6 +275,7 @@
     <Content Include="Views\Cart\Cart.cshtml" />
     <Content Include="Views\Book\AddComment.cshtml" />
     <Content Include="Views\Book\ViewComments.cshtml" />
+    <Content Include="Views\ListOrder\ListOrderDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
