@@ -137,12 +137,12 @@ else
                 ChartStatsByMonth(res);
             });
 
-            //$.get('/Admin/DashBoard/ThongKeSoLuongSachTheoTheLoai', function (res) {
-            //    chartPieCateProd(res);
-            //});
+            $.get('/Admin/DashBoard/ThongKeSoLuongSachTheoTheLoai', function (res) {
+                chartPieCateProd(res);
+            });
 
             console.log(categoryNames);
-            //chartPieCateProd();
+            chartPieCateProd();
             ChartStatsByMonth();
         }
     </script>

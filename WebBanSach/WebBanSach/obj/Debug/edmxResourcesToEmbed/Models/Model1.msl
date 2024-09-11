@@ -67,6 +67,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spThongKeDoanhThuTheLoaiTheoNam" FunctionName="BookStoreModel.Store.spThongKeDoanhThuTheLoaiTheoNam">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BookStoreModel.spThongKeDoanhThuTheLoaiTheoNam_Result">
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="spThongKeDoanhThuTheoNam" FunctionName="BookStoreModel.Store.spThongKeDoanhThuTheoNam">
       <ResultMapping>
         <ComplexTypeMapping TypeName="BookStoreModel.spThongKeDoanhThuTheoNam_Result">
@@ -91,5 +99,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ThongKeSoLuongSachTheoTheLoai" FunctionName="BookStoreModel.Store.ThongKeSoLuongSachTheoTheLoai" />
   </EntityContainerMapping>
 </Mapping>

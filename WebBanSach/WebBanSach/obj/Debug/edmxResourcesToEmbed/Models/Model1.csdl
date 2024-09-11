@@ -175,6 +175,9 @@
       <End Role="User" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
+    <FunctionImport Name="spThongKeDoanhThuTheLoaiTheoNam" ReturnType="Collection(BookStoreModel.spThongKeDoanhThuTheLoaiTheoNam_Result)">
+      <Parameter Name="year" Mode="In" Type="Int32" />
+    </FunctionImport>
     <FunctionImport Name="spThongKeDoanhThuTheoNam" ReturnType="Collection(BookStoreModel.spThongKeDoanhThuTheoNam_Result)">
       <Parameter Name="year" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -182,7 +185,12 @@
       <Parameter Name="thang" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="ThongKeDoanhThuTheoThang" ReturnType="Collection(BookStoreModel.ThongKeDoanhThuTheoThang_Result)" />
+    <FunctionImport Name="ThongKeSoLuongSachTheoTheLoai" ReturnType="Collection(Int32)" />
   </EntityContainer>
+  <ComplexType Name="spThongKeDoanhThuTheLoaiTheoNam_Result">
+    <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="TongTien" Nullable="true" />
+  </ComplexType>
   <ComplexType Name="spThongKeDoanhThuTheoNam_Result">
     <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
     <Property Type="Double" Name="TongTien" Nullable="true" />

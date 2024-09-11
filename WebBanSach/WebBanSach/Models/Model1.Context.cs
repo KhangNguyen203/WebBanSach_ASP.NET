@@ -34,6 +34,15 @@ namespace WebBanSach.Models
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<User> Users { get; set; }
     
+        public virtual ObjectResult<spThongKeDoanhThuTheLoaiTheoNam_Result> spThongKeDoanhThuTheLoaiTheoNam(Nullable<int> year)
+        {
+            var yearParameter = year.HasValue ?
+                new ObjectParameter("year", year) :
+                new ObjectParameter("year", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spThongKeDoanhThuTheLoaiTheoNam_Result>("spThongKeDoanhThuTheLoaiTheoNam", yearParameter);
+        }
+    
         public virtual ObjectResult<spThongKeDoanhThuTheoNam_Result> spThongKeDoanhThuTheoNam(Nullable<int> year)
         {
             var yearParameter = year.HasValue ?
@@ -55,6 +64,11 @@ namespace WebBanSach.Models
         public virtual ObjectResult<ThongKeDoanhThuTheoThang_Result> ThongKeDoanhThuTheoThang()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ThongKeDoanhThuTheoThang_Result>("ThongKeDoanhThuTheoThang");
+        }
+    
+        public virtual ObjectResult<Nullable<int>> ThongKeSoLuongSachTheoTheLoai()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("ThongKeSoLuongSachTheoTheLoai");
         }
     }
 }

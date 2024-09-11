@@ -181,6 +181,9 @@
     <Compile Include="Models\Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\spThongKeDoanhThuTheLoaiTheoNam_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\spThongKeDoanhThuTheoNam_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -241,6 +244,8 @@
     <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Product\EditProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Product\ListProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\DashBoard\DashBoard.cshtml" />
+    <Content Include="Areas\Admin\Views\Stats\Index.cshtml" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -248,7 +253,6 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\DashBoard\DashBoard.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -282,7 +286,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Stats\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

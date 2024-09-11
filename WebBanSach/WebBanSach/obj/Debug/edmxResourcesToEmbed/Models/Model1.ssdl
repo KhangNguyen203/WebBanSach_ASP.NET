@@ -132,6 +132,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="spThongKeDoanhThuTheLoaiTheoNam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="year" Type="int" Mode="In" />
+  </Function>
   <Function Name="spThongKeDoanhThuTheoNam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="year" Type="int" Mode="In" />
   </Function>
@@ -139,6 +142,7 @@
     <Parameter Name="thang" Type="int" Mode="In" />
   </Function>
   <Function Name="ThongKeDoanhThuTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ThongKeSoLuongSachTheoTheLoai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="BookStoreModelStoreContainer">
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
