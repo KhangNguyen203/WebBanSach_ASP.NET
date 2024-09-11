@@ -39,6 +39,7 @@
           <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderDate" Type="date" />
           <Property Name="UserID" Type="int" />
+          <Property Name="Status" Type="nchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -51,16 +52,6 @@
           <Property Name="Description" Type="nvarchar" MaxLength="500" />
           <Property Name="CategoryID" Type="int" />
           <Property Name="Author" Type="nvarchar" MaxLength="100" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -146,13 +137,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="spThongKeDoanhThuTheoNam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="year" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spThongKeSoLuongSanPhamTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="thang" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ThongKeDoanhThuTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="BookStoreModelStoreContainer">
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Comments__Produc__4222D4EF" Association="Self.FK__Comments__Produc__4222D4EF">
             <End Role="Product" EntitySet="Product" />
@@ -223,6 +220,7 @@
           <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OrderDate" Type="DateTime" Precision="0" />
           <Property Name="UserID" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="Orders" ToRole="OrderDetails" />
           <NavigationProperty Name="User" Relationship="Self.FK__Orders__UserID__4316F928" FromRole="Orders" ToRole="User" />
         </EntityType>
@@ -240,16 +238,6 @@
           <NavigationProperty Name="Category" Relationship="Self.FK__Product__Categor__440B1D61" FromRole="Product" ToRole="Category" />
           <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__Produc__4222D4EF" FromRole="Product" ToRole="Comments" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__45F365D3" FromRole="Product" ToRole="OrderDetails" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -343,7 +331,6 @@
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
           <EntitySet Name="Products" EntityType="Self.Product" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <AssociationSet Name="FK__Product__Categor__440B1D61" Association="Self.FK__Product__Categor__440B1D61">
             <End Role="Category" EntitySet="Categories" />
@@ -369,7 +356,26 @@
             <End Role="User" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
+          <FunctionImport Name="spThongKeDoanhThuTheoNam" ReturnType="Collection(BookStoreModel.spThongKeDoanhThuTheoNam_Result)">
+            <Parameter Name="year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spThongKeSoLuongSanPhamTheoThang" ReturnType="Collection(BookStoreModel.spThongKeSoLuongSanPhamTheoThang_Result)">
+            <Parameter Name="thang" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ThongKeDoanhThuTheoThang" ReturnType="Collection(BookStoreModel.ThongKeDoanhThuTheoThang_Result)" />
         </EntityContainer>
+        <ComplexType Name="spThongKeDoanhThuTheoNam_Result">
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="Double" Name="TongTien" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spThongKeSoLuongSanPhamTheoThang_Result">
+          <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="soLuong" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="ThongKeDoanhThuTheoThang_Result">
+          <Property Type="Int32" Name="thang" Nullable="true" />
+          <Property Type="Double" Name="TongTien" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -412,6 +418,7 @@
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -428,17 +435,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="BookStoreModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="BookStoreModel.User">
               <MappingFragment StoreEntitySet="User">
@@ -452,6 +448,30 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spThongKeDoanhThuTheoNam" FunctionName="BookStoreModel.Store.spThongKeDoanhThuTheoNam">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BookStoreModel.spThongKeDoanhThuTheoNam_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spThongKeSoLuongSanPhamTheoThang" FunctionName="BookStoreModel.Store.spThongKeSoLuongSanPhamTheoThang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BookStoreModel.spThongKeSoLuongSanPhamTheoThang_Result">
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ThongKeDoanhThuTheoThang" FunctionName="BookStoreModel.Store.ThongKeDoanhThuTheoThang">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BookStoreModel.ThongKeDoanhThuTheoThang_Result">
+                <ScalarProperty Name="thang" ColumnName="thang" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

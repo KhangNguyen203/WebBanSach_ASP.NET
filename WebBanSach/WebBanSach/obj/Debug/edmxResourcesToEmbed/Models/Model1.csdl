@@ -39,6 +39,7 @@
     <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="OrderDate" Type="DateTime" Precision="0" />
     <Property Name="UserID" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
     <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="Orders" ToRole="OrderDetails" />
     <NavigationProperty Name="User" Relationship="Self.FK__Orders__UserID__4316F928" FromRole="Orders" ToRole="User" />
   </EntityType>

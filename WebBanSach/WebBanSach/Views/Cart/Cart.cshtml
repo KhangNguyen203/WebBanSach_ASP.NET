@@ -7,6 +7,13 @@
 
 @Html.ValidationMessage("", "", new { @class = "text-danger" })
 
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success text-center success-message">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
 @if (Model == null)
 {
     <h2 class="text-info text-center">Chưa có sản phẩm</h2>
@@ -85,7 +92,7 @@ else
                             </div>
 
                             @*<a class="btn btn-success btn-sm" href="@Url.Action("ListProduct", "Product")">
-                                    Tiếp tục mua hàng
+                                     Tiếp tục mua hàng
                                 </a>*@
                         </form>
                     </div>

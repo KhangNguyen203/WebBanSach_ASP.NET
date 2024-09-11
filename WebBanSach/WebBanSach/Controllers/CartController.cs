@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebBanSach.Models;
+using System.Transactions;
 
 namespace WebBanSach.Controllers
 {
@@ -72,5 +75,62 @@ namespace WebBanSach.Controllers
             }
             return RedirectToAction("Cart");
         }
+
+        //[HttpPost]
+        public ActionResult Order()
+        {
+            List<CartModels> cart = Session["cart"] as List<CartModels>;
+            string email = (string)Session["Email"];
+
+            using (TransactionScope scope = new TransactionScope())
+            {
+                int userID = (int)Session["UserID"];
+                try
+                {
+                    if (!cart.Any())
+                    {
+                        TempData["cartIsEmpty"] = "Chưa có đơn hàng";
+                    }
+                    else
+                    {
+                        Models.Order order = new Models.Order();
+                        order.OrderDate = DateTime.Now;
+                        order.UserID = userID;
+                        order.Status = "Tiền mặt";
+
+                        da.Orders.Add(order);
+                        da.SaveChanges();
+
+                        var idOrder = order.OrderID;
+
+                        foreach (CartModels item in cart)
+                        {
+                            OrderDetail orderDetail = new OrderDetail();
+                            orderDetail.OrderID = idOrder;
+                            orderDetail.ProductID = item.ProductID;
+                            orderDetail.UnitPrice = item.Price;
+                            orderDetail.Quantity = item.Quantity;
+                            da.OrderDetails.Add(orderDetail);
+                            da.SaveChanges();
+                        }
+
+                        scope.Complete();
+                        cart.Clear();
+
+                        TempData["SuccessMessage"] = "Thanh toán thành công!";
+                        return RedirectToAction("Cart");
+
+                    }
+                    return RedirectToAction("Cart");
+
+                }
+                catch (Exception ex)
+                {
+                    scope.Dispose();
+                    return View("Cart");
+                }
+            }
+        }
+
     }
 }
