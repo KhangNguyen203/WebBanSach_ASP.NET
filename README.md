@@ -21,7 +21,7 @@
     + Database Manager: Sql server + SSMS 
     + IDE: Visual studio IDE
   - Qui trình:
-    + Tạo csdl bằng file test.sql
+    + Tạo csdl bằng file database.sql
     +  Vào VS tạo Model kết nối tới DB (dùng ADO.NET Entity Data Model).
     + Chạy local host (Chưa có dữ liệu, cần tạo Admin Account), đăng kí tài khoản mới.
     + Vào sql server sửa userRole của user vừa tạo sửa thành "Admin".
