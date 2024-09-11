@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebBanSach.Models;
 
-namespace QuanLiBanSach02.Areas.Admin.Controllers
+namespace WebBanSach.Areas.Admin.Controllers
 {
     public class DashBoardController : Controller
     {
@@ -23,12 +23,12 @@ namespace QuanLiBanSach02.Areas.Admin.Controllers
             return View();
         }
 
-        //public ActionResult StatsByMonth()
-        //{
-        //    var lsDataStatsByMonth = da.ThongKeDoanhThuTheoThang();
+        public ActionResult StatsByMonth()
+        {
+            var lsDataStatsByMonth = da.ThongKeDoanhThuTheoThang();
 
-        //    return Json(lsDataStatsByMonth, JsonRequestBehavior.AllowGet);
-        //}
+            return Json(lsDataStatsByMonth, JsonRequestBehavior.AllowGet);
+        }
 
         //public ActionResult ThongKeSoLuongSachTheoTheLoai()
         //{
