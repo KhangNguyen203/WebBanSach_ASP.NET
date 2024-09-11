@@ -1,34 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\",
+  "WorkspaceRootPath": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\views\\book\\addcomment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\book\\addcomment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\areas\\admin\\views\\product\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\areas\\admin\\views\\product\\createproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\views\\book\\viewcomments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\book\\viewcomments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\areas\\admin\\views\\product\\listproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\areas\\admin\\views\\product\\listproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\views\\book\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\book\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\areas\\admin\\views\\product\\editproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\areas\\admin\\views\\product\\editproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\views\\users\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\users\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\areas\\admin\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\areas\\admin\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\views\\cart\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\areas\\admin\\views\\category\\createcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\areas\\admin\\views\\category\\createcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|d:\\webbansach\\webbansach_asp.net\\webbansach\\webbansach\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|c:\\users\\setup\\desktop\\webbansach_asp.net\\webbansach\\webbansach\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{11533CE7-AE0B-4ABE-844F-0885436C2CEB}|WebBanSach\\WebBanSach.csproj|solutionrelative:webbansach\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +42,114 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Product\\CreateProduct.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Areas\\Admin\\Views\\Product\\CreateProduct.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Product\\CreateProduct.cshtml",
+              "RelativeToolTip": "WebBanSach\\Areas\\Admin\\Views\\Product\\CreateProduct.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-11T05:54:09.664Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Users\\Register.cshtml",
-              "RelativeDocumentMoniker": "WebBanSach\\Views\\Users\\Register.cshtml",
-              "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Users\\Register.cshtml",
-              "RelativeToolTip": "WebBanSach\\Views\\Users\\Register.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADoAAAAAAAAA",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Areas\\Admin\\Views\\Product\\Details.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "WebBanSach\\Areas\\Admin\\Views\\Product\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T12:56:50.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Users\\Login.cshtml",
-              "RelativeDocumentMoniker": "WebBanSach\\Views\\Users\\Login.cshtml",
-              "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Users\\Login.cshtml",
-              "RelativeToolTip": "WebBanSach\\Views\\Users\\Login.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T12:56:42.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Cart.cshtml",
-              "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Cart\\Cart.cshtml",
-              "RelativeDocumentMoniker": "WebBanSach\\Views\\Cart\\Cart.cshtml",
-              "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Cart\\Cart.cshtml",
-              "RelativeToolTip": "WebBanSach\\Views\\Cart\\Cart.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T12:49:15.86Z",
+              "WhenOpened": "2024-09-11T05:54:06.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Book\\Detail.cshtml",
-              "RelativeDocumentMoniker": "WebBanSach\\Views\\Book\\Detail.cshtml",
-              "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Book\\Detail.cshtml",
-              "RelativeToolTip": "WebBanSach\\Views\\Book\\Detail.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAoAAAAcAAAA",
+              "Title": "EditProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Product\\EditProduct.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Areas\\Admin\\Views\\Product\\EditProduct.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Product\\EditProduct.cshtml",
+              "RelativeToolTip": "WebBanSach\\Areas\\Admin\\Views\\Product\\EditProduct.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T12:43:59.723Z",
+              "WhenOpened": "2024-09-11T05:54:04.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebBanSach\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-11T05:52:06.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Category\\CreateCategory.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Areas\\Admin\\Views\\Category\\CreateCategory.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Category\\CreateCategory.cshtml",
+              "RelativeToolTip": "WebBanSach\\Areas\\Admin\\Views\\Category\\CreateCategory.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-11T05:51:50.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ViewComments.cshtml",
-              "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Book\\ViewComments.cshtml",
-              "RelativeDocumentMoniker": "WebBanSach\\Views\\Book\\ViewComments.cshtml",
-              "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Book\\ViewComments.cshtml",
-              "RelativeToolTip": "WebBanSach\\Views\\Book\\ViewComments.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ListProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Product\\ListProduct.cshtml",
+              "RelativeDocumentMoniker": "WebBanSach\\Areas\\Admin\\Views\\Product\\ListProduct.cshtml",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Views\\Product\\ListProduct.cshtml",
+              "RelativeToolTip": "WebBanSach\\Areas\\Admin\\Views\\Product\\ListProduct.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T12:43:58.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddComment.cshtml",
-              "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Book\\AddComment.cshtml",
-              "RelativeDocumentMoniker": "WebBanSach\\Views\\Book\\AddComment.cshtml",
-              "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Views\\Book\\AddComment.cshtml",
-              "RelativeToolTip": "WebBanSach\\Views\\Book\\AddComment.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-08T12:43:39.952Z",
+              "WhenOpened": "2024-09-11T05:50:06.349Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "BookController.cs",
-              "DocumentMoniker": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Controllers\\BookController.cs",
-              "RelativeDocumentMoniker": "WebBanSach\\Controllers\\BookController.cs",
-              "ToolTip": "D:\\WebBanSach\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Controllers\\BookController.cs",
-              "RelativeToolTip": "WebBanSach\\Controllers\\BookController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACQAAAAmAAAA",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "WebBanSach\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "WebBanSach\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-08T12:37:38.914Z",
+              "WhenOpened": "2024-09-11T05:49:49.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Web.config",
+              "RelativeDocumentMoniker": "WebBanSach\\Web.config",
+              "ToolTip": "C:\\Users\\SETUP\\Desktop\\WebBanSach_ASP.NET\\WebBanSach\\WebBanSach\\Web.config",
+              "RelativeToolTip": "WebBanSach\\Web.config",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAD8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-11T05:48:29.366Z",
               "EditorCaption": ""
             }
           ]
