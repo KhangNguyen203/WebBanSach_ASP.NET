@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebBanSach.Models;
 
-namespace QuanLiBanSach02.Areas.Admin.Controllers
+namespace WebBanSach.Areas.Admin.Controllers
 {
     public class ProductController : Controller
     {
