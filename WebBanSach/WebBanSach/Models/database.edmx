@@ -137,6 +137,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="spThongKeDoanhThuTheLoaiTheoNam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="year" Type="int" Mode="In" />
+        </Function>
         <Function Name="spThongKeDoanhThuTheoNam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="year" Type="int" Mode="In" />
         </Function>
@@ -144,6 +147,7 @@
           <Parameter Name="thang" Type="int" Mode="In" />
         </Function>
         <Function Name="ThongKeDoanhThuTheoThang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ThongKeSoLuongSachTheoTheLoai" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="BookStoreModelStoreContainer">
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
@@ -356,6 +360,9 @@
             <End Role="User" EntitySet="Users" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
+          <FunctionImport Name="spThongKeDoanhThuTheLoaiTheoNam" ReturnType="Collection(BookStoreModel.spThongKeDoanhThuTheLoaiTheoNam_Result)">
+            <Parameter Name="year" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="spThongKeDoanhThuTheoNam" ReturnType="Collection(BookStoreModel.spThongKeDoanhThuTheoNam_Result)">
             <Parameter Name="year" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -363,7 +370,12 @@
             <Parameter Name="thang" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ThongKeDoanhThuTheoThang" ReturnType="Collection(BookStoreModel.ThongKeDoanhThuTheoThang_Result)" />
+          <FunctionImport Name="ThongKeSoLuongSachTheoTheLoai" ReturnType="Collection(Int32)" />
         </EntityContainer>
+        <ComplexType Name="spThongKeDoanhThuTheLoaiTheoNam_Result">
+          <Property Type="String" Name="CategoryName" Nullable="true" MaxLength="50" />
+          <Property Type="Double" Name="TongTien" Nullable="true" />
+        </ComplexType>
         <ComplexType Name="spThongKeDoanhThuTheoNam_Result">
           <Property Type="String" Name="ProductName" Nullable="true" MaxLength="100" />
           <Property Type="Double" Name="TongTien" Nullable="true" />
@@ -448,6 +460,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spThongKeDoanhThuTheLoaiTheoNam" FunctionName="BookStoreModel.Store.spThongKeDoanhThuTheLoaiTheoNam">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BookStoreModel.spThongKeDoanhThuTheLoaiTheoNam_Result">
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="spThongKeDoanhThuTheoNam" FunctionName="BookStoreModel.Store.spThongKeDoanhThuTheoNam">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BookStoreModel.spThongKeDoanhThuTheoNam_Result">
@@ -472,6 +492,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ThongKeSoLuongSachTheoTheLoai" FunctionName="BookStoreModel.Store.ThongKeSoLuongSachTheoTheLoai" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
